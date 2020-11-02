@@ -18,6 +18,8 @@ myNinjaApp.config(["$routeProvider", function ($routeProvider) {
 myNinjaApp.directive("randomNinja", [function () {
     return {
         restrict: "E",
+        transclude: true,
+        replace: true,
         scope: {
             ninjas: "=",
             title: "=",
@@ -54,7 +56,6 @@ myNinjaApp.controller("NinjaController", ["$scope", "$http", function ($scope, $
             rate: ""
         };
     }
-
 }]);
 
 myNinjaApp.controller("RandomNinjaController", ["$scope", function($scope) {
