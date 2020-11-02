@@ -11,9 +11,11 @@
 
 <body>
     <div ng-controller="NinjaController">
-        <p>{{ message }}</p>
+        <input type="text" ng-model="search" />
         <ul>
-            <li ng-repeat="ninja in ninjas">{{ ninja }}</li>
+            <li ng-repeat="ninja in ninjas | orderBy: '-name' | filter: search">
+                {{ ninja.name }} - {{ ninja .rate | currency: '£'}}
+            </li>
         </ul>
     </div>
 
