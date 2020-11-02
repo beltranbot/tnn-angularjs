@@ -1,0 +1,21 @@
+<div class="content">
+    <form name="contactForm" novalidate>
+        <input type="text" placeholder="Name" name="name" ng-model="contact.name" ng-required="true">
+        <input type="email" placeholder="Email" name="email" ng-model="contact.email" ng-required="true">
+        <textarea placeholder="Your Message" name="message" ng-model="contact.message" ng-required="true"></textarea>
+        <input type="submit" value="Send">
+    </form>
+</div>
+
+<!-- 
+    form classes
+
+    ng-pristine - when form/input has notb been used yet
+    ng-dirty - when form/input has been used
+
+    ng-untouched - when input has not been touched
+    ng-touched - when input has been touched
+
+    ng-valid - when a form field is valid
+    ng-invalid - when a form field is not valid
+-->
