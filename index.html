@@ -9,9 +9,11 @@
     <script src="app/lib/angular.min.js"></script>
 </head>
 
-<body ng-init="color='red'">
+<body ng-init="ninjas=['yoshi','crystal','ryu','shaun']">
     <input type="text" ng-model="favMeat" placeholder="enter your fav meat">
-    <p class="{{color}}"> hello dudes</p>
+    <ul>
+        <li ng-repeat="ninja in ninjas">{{ ninja }}</li>
+    </ul>
 </body>
 
 </html>
