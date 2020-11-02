@@ -55,7 +55,11 @@ myNinjaApp.controller("NinjaController", ["$scope", "$http", function ($scope, $
             belt: "",
             rate: ""
         };
-    }
+    };
+
+    $scope.removeAll = function () {
+        $scope.ninjas = [];
+    };
 }]);
 
 myNinjaApp.controller("RandomNinjaController", ["$scope", function($scope) {
