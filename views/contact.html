@@ -1,5 +1,5 @@
 <div class="content">
-    <form name="contactForm" novalidate>
+    <form name="contactForm" ng-submit="sendMessage()" novalidate>
         <input type="text" placeholder="Name" name="name" ng-model="contact.name" ng-required="true">
         <div ng-show="contactForm.name.$touched && contactForm.name.$invalid">
             <small style="color: red; display: block; text-align: center;">Enter a valid name</small>
@@ -12,16 +12,3 @@
         <input type="submit" value="Send" ng-disabled="contactForm.$invalid">
     </form>
 </div>
-
-<!-- 
-    form classes
-
-    ng-pristine - when form/input has notb been used yet
-    ng-dirty - when form/input has been used
-
-    ng-untouched - when input has not been touched
-    ng-touched - when input has been touched
-
-    ng-valid - when a form field is valid
-    ng-invalid - when a form field is not valid
--->

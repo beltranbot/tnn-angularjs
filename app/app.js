@@ -7,11 +7,15 @@ myNinjaApp.config(["$routeProvider", function ($routeProvider) {
             controller: "NinjaController"
         })
         .when("/contact", {
-            templateUrl: "views/contact.html"
+            templateUrl: "views/contact.html",
+            controller: "ContactController"
         })
         .when("/directory", {
             templateUrl: "views/directory.html",
             controller: "NinjaController"
+        })
+        .when("/contact-success", {
+            templateUrl: "views/contact-success.html"
         })
         .otherwise({
             redirectTo: "/home"
@@ -67,4 +71,10 @@ myNinjaApp.controller("NinjaController", ["$scope", "$http", function ($scope, $
 
 myNinjaApp.controller("RandomNinjaController", ["$scope", function($scope) {
     $scope.random = Math.floor(Math.random() * 4);
+}]);
+
+myNinjaApp.controller("ContactController", ["$scope", "$location", function ($scope, $location) {
+    $scope.sendMessage = function () {
+        $location.path("/contact-success");
+    };
 }]);
