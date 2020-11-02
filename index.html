@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en" ng-app>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TheNetNinja Angular Playlist</title>
     <link rel="stylesheet" href="content/css/styles.css" type="text/css">
-    <script src="app\lib\angular.min.js"></script>
+    <script src="app/lib/angular.min.js"></script>
 </head>
-<body>
+
+<body ng-init="color='red'">
     <input type="text" ng-model="favMeat" placeholder="enter your fav meat">
-    <p>Your fav meat is: {{ favMeat }}</p>
+    <p class="{{color}}"> hello dudes</p>
 </body>
+
 </html>
